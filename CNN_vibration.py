@@ -2,7 +2,6 @@
 """
 Created on Tue Jun 30 18:25:16 2020
 
-@author: 李贺
 """
 #这是打乱数据用的，如果下载不了这个包，就别用了，也把下面的shuffle删掉
 from sklearn.utils import shuffle
