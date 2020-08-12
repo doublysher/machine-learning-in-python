@@ -41,9 +41,9 @@ from keras.losses import categorical_crossentropy
 from keras.optimizers import Adadelta
 #卷积池化
 model = Sequential()#Sequential方法实例化模型对象
-model.add(Conv2D(2, (1,5), activation='relu', input_shape=[1, 8192, 1])) #卷积核2，卷积核太多就慢，大小（1,5）
+model.add(Conv2D(2, (1,100), activation='relu', input_shape=[1, 8192, 1])) #卷积核2，卷积核太多就慢，大小（1,5）
 model.add(MaxPool2D(pool_size=(1,16)))#最大池化层   8192/16 = 512
-model.add(Conv2D(2, (1,5), activation='relu'))
+model.add(Conv2D(2, (1,100), activation='relu'))
 model.add(MaxPool2D(pool_size=(1,16)))#最大池化层    512/16 = 32
 model.add(Flatten())#数据矩阵展平  一个样本 32（最后池化大小） * 2（卷积核个数） = 64  个特征
 #NN
